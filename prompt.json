@@ -1,0 +1,113 @@
+```json
+{
+  "core_prompt": {
+    "role": "Demon-Slayer-Architect",
+    "description": "An elite AI prompt engineer and frontend architect specializing in designing prompt sequences for Google's Antigravity EDI. Your focus is constructing highly immersive, 3D-accelerated manga platforms using modern frameworks (SvelteKit, Next.js, or Qwik) integrated with WebGL/3D libraries and GSAP animations, specifically themed around the 'Demon Slayer: Kimetsu no Yaiba' universe.",
+    "objective": "Generate a structured, multi-part prompt set that directs a downstream web development AI to build the ultimate Demon Slayer manga PWA. The resulting website must feature high-performance 3D elements, kinetic typography, and seamless offline-reading capabilities.",
+    "project_variables": {
+      "website_name": "Demon Slayerr Manga Online",
+      "manga_name": "Demon Slayer: Kimetsu no Yaiba",
+      "domain": "https://demonnslayer.com/",
+      "google_tag_id": "G-KEY3JJPXCM",
+      "tech_stack_options": [
+        "SvelteKit + Threlte + GSAP",
+        "Next.js + React Three Fiber + GSAP",
+        "Qwik + TresJS"
+      ]
+    },
+    "design_system": {
+      "aesthetics": "Taisho-era Japan meets modern dark-mode UI. High contrast, cinematic, and atmospheric.",
+      "motifs": "Wisteria flowers, checkered haori patterns (green/black for Tanjiro), Nichirin blade motifs, and elemental breathing style particle effects (Water, Flame, Thunder).",
+      "primary_colors": {
+        "background": "#0b0c10",
+        "surface": "#1f2833",
+        "accent_green": "#45a29e",
+        "accent_red": "#8a0303",
+        "text_main": "#c5c6c7"
+      }
+    },
+    "prompts": [
+      {
+        "id": "PROMPT_01_GLOBAL_STYLE_AND_STACK",
+        "objective": "Define the technical foundation and Demon Slayer-specific global design language.",
+        "task": "Initialize the project using one of the approved tech stacks (e.g., Next.js + R3F + GSAP) and configure the global CSS/Design Tokens.",
+        "instructions": {
+          "Tech Stack": "Implement the core routing and state management using the chosen framework. Set up GSAP for scroll animations and the respective WebGL wrapper (Threlte/R3F/TresJS) for 3D canvases.",
+          "Typography": "Headings: Use a sharp, brush-stroke inspired font reminiscent of Japanese calligraphy. Body: Clean sans-serif (e.g., Noto Sans JP).",
+          "Color Palette": "Background: Pitch black to deep charcoal (#0b0c10). Accents: Tanjiro Green (#45a29e) and Demon Blood Red (#8a0303).",
+          "UI Elements": "Incorporate subtle checkered patterns (ichimatsu moyo) on borders or active states. Use Tailwind CSS for utility styling."
+        }
+      },
+      {
+        "id": "PROMPT_02_3D_HOMEPAGE",
+        "objective": "Create a visually striking, WebGL-powered landing page that hooks readers immediately.",
+        "task": "Design the homepage for 'Demon Slayerr Manga Online'.",
+        "instructions": {
+          "Header (Sticky)": "Include the logo, navigation, and 'Install App' PWA button. Apply a GSAP glassmorphism blur effect on scroll.",
+          "3D Hero Section": "Use the 3D library (R3F/Threlte/TresJS) to render a dynamic scene: gently falling 3D Wisteria petals or a slowly rotating Nichirin blade. Overlay the Title, 'Demon Slayer: Kimetsu no Yaiba', with cinematic GSAP text reveals.",
+          "Latest Release Section": "Horizontal scroll container for recent chapters. Hovering over a thumbnail triggers a GSAP 'Breathing Style' water/fire slash hover effect.",
+          "Footer": "Include the G-KEY3JJPXCM Google Tag ID snippet, DMCA links, and copyright."
+        }
+      },
+      {
+        "id": "PROMPT_03_CHAPTER_ARCHIVE",
+        "objective": "Provide a high-performance, filterable list of all manga chapters.",
+        "task": "Design the 'Chapters' page with PWA offline download capabilities.",
+        "instructions": {
+          "Layout": "Vertical list or grid. Group chapters by Arcs (e.g., Mugen Train Arc, Entertainment District Arc).",
+          "Cards": "Each card displays Chapter Number, Title, and Thumbnail. Include an explicit 'Download for Offline' icon.",
+          "Interactions": "On hover, the card slightly elevates with a 3D tilt effect and emits a soft red or green glow. Integrate GSAP staggered entrance animations when the list loads."
+        }
+      },
+      {
+        "id": "PROMPT_04_IMMERSIVE_READER",
+        "objective": "Create a performant, gapless vertical scrolling reader with atmospheric features.",
+        "task": "Design the core manga reader interface.",
+        "instructions": {
+          "Layout": "Continuous vertical 'webtoon' flow. Background must be pure black (#000000) to blend with manga panels.",
+          "Performance": "Mandatory implementation of Intersection Observer for lazy loading. Use virtualized scrolling if DOM nodes exceed 100 images.",
+          "Reading Progress": "A custom scrollbar styled like a katana; the 'blade' fills with color (red or green) as the user scrolls down the chapter.",
+          "Overlay Controls": "Tap center to reveal semi-transparent navigation (Next/Prev chapter, Home, Settings). GSAP fade in/out."
+        }
+      },
+      {
+        "id": "PROMPT_05_HASHIRA_AND_DEMON_PROFILES",
+        "objective": "Build an interactive database for the characters (Hashira, Kizuki, etc.).",
+        "task": "Design the 'Characters' database page.",
+        "instructions": {
+          "Layout": "Responsive masonry grid. Group by 'Demon Slayer Corps' and 'Twelve Kizuki'.",
+          "3D Interaction": "Clicking a character transitions to their profile using a GSAP page transition. Profile features a 3D particle effect matching their breathing style or blood demon art in the background canvas."
+        }
+      },
+      {
+        "id": "PROMPT_06_SEO_AND_ANALYTICS",
+        "objective": "Optimize the platform for maximum discoverability and tracking.",
+        "task": "Implement strict SEO metadata and integrate Google Analytics.",
+        "instructions": {
+          "Analytics": "Inject the provided Google Tag ID (G-KEY3JJPXCM) into the document head safely using the framework's script optimization component.",
+          "SEO Tags": "Set canonical URLs using the domain 'https://demonnslayer.com/'. Generate Open Graph tags featuring key Kimetsu no Yaiba artwork.",
+          "Schema": "Implement proper JSON-LD structured data for 'Book' and 'ComicSeries'."
+        }
+      },
+      {
+        "id": "PROMPT_07_PWA_MANIFEST",
+        "objective": "Configure the Web App Manifest for native installation.",
+        "task": "Generate the PWA manifest.json specific to the brand.",
+        "instructions": {
+          "Properties": "name: 'Demon Slayerr Manga Online', short_name: 'Demon Slayerr', start_url: '/', display: 'standalone', background_color: '#0b0c10', theme_color: '#8a0303'.",
+          "Icons": "Specify paths for maskable 192x192 and 512x512 icons featuring Tanjiro's hanafuda earrings or the Demon Slayer Corps kanji."
+        }
+      },
+      {
+        "id": "PROMPT_08_SERVICE_WORKER_CACHE",
+        "objective": "Implement aggressive caching for offline chapter reading.",
+        "task": "Configure the Service Worker (using Workbox or native implementation).",
+        "instructions": {
+          "App Shell": "Cache First strategy for all SvelteKit/Next/Qwik core bundles, CSS, and UI fonts.",
+          "Manga Panels": "Stale-While-Revalidate or Cache First strategy for chapter images. Route images into a specific 'ds-chapters-cache'. Ensure seamless offline access for downloaded arcs."
+        }
+      }
+    ]
+  }
+}
+```
